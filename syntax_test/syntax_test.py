@@ -37,6 +37,6 @@ def range_test():
 if __name__ == '__main__':
     # if_statement_test()
     # RE_test()
-    # python_equal()
+    python_equal()
     str_index()
     range_test()
