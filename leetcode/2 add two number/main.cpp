@@ -28,11 +28,11 @@ public:
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 		int carry = 0;
 
-		ListNode res(digit_plus_transform(l1->val, l2->val, carry));
+		ListNode* res = new ListNode(digit_plus_transform(l1->val, l2->val, carry));
 
 		ListNode* iter1 = l1->next;
 		ListNode* iter2 = l2->next;
-		ListNode* iter_res = &res;
+		ListNode* iter_res = res;
 		while (iter1 || iter2)
 		{
 			if (!iter1)
@@ -63,7 +63,7 @@ public:
 			ListNode* node = new ListNode(1);
 			iter_res->next = node;
 		}
-		return &res;
+		return res;
 	}
 };
 
