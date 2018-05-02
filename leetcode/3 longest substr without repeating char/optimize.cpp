@@ -9,7 +9,7 @@ class Solution {
 public:
 	int lengthOfLongestSubstring(string s) {
 		int res = 0;
-		int left = 0;
+		int left = -1;
 		map <char, int> exist;
 		for (unsigned i = 0; i < s.length(); i++)
 		{
