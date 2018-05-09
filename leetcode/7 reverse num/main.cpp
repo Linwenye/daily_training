@@ -2,6 +2,7 @@
 #include <climits>
 using namespace std;
 
+//借鉴：判断溢出：乘10并加尾数后，再 /10若跟原来不相同，则溢出
 class Solution {
 public:
 	int reverse(int x) {
