@@ -50,3 +50,5 @@ Debug
 *.VC.opendb
 *.vcxproj
 *.vcxproj.filters
+
+*.pyc
