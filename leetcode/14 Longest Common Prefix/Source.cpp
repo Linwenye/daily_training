@@ -8,6 +8,7 @@ class Solution {
 public:
 	string longestCommonPrefix(vector<string>& strs) {
 		string res = "";
+		if (strs.empty()) return res;
 		int i = 0;
 		int max_i = strs[0].size();
 		for (auto &s : strs)
