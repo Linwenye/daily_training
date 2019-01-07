@@ -7,11 +7,11 @@ class Solution {
 	string a[10] = { "","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz" };
 public:
 	vector<string> letterCombinations(string digits) {
+		vector<string> res;
 		if (!digits.size())
 		{
-			return;
+			return res;
 		}
-		vector<string> res;
 		string pre = "";
 		permuation(pre, digits, res);
 		return res;
