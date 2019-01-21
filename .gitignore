@@ -52,3 +52,4 @@ Debug
 *.vcxproj.filters
 
 *.pyc
+*.user

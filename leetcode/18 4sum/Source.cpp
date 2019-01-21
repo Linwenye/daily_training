@@ -6,7 +6,12 @@ class Solution {
 public:
 	void threeSum(vector<int>& nums, int index, int target, int to_add, vector<vector<int>> &res) {
 		int distance = 2147483647; //max
+		int pre = nums[index] + 1;
 		for (int i = index; i < nums.size() - 2; i++) {
+			if (nums[i] == pre) {
+				continue;
+			}
+			pre = nums[i];
 			int expected = target - nums[i];
 			int l = i + 1;
 			int r = nums.size() - 1;
@@ -52,8 +57,9 @@ public:
 	}
 
 	vector<vector<int>> fourSum(vector<int>& nums, int target) {
-		sort(nums.begin(), nums.end());
 		vector<vector<int>> res;
+		if (nums.size() < 4) return res;
+		sort(nums.begin(), nums.end());
 
 		// TODO: skip repeat
 		int pre = nums[0] + 1;
