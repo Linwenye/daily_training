@@ -24,7 +24,7 @@ public:
 			remove = remove->next;
 		}
 		remove->next = remove->next->next;
-		return head;
+		return pivot.next;
 	}
 };
 
