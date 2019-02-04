@@ -53,6 +53,7 @@ public:
 				head = next_head;
 			}
 		}
+		pre_tail->next = NULL;
 
 		return pivot->next;
 	}
@@ -67,7 +68,7 @@ int main() {
 	ListNode n2 = ListNode(4);
 	n1.next->next->next = &n2;
 	n2.next = &ListNode(5);
-
+	n2.next->next = &ListNode(6);
 
 	Solution so;
 	ListNode* r = so.reverseKGroup(&n1, 3);
