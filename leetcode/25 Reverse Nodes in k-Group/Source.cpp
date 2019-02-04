@@ -15,6 +15,9 @@ struct ListNode {
 class Solution {
 public:
 	ListNode* reverse(ListNode*& pre, ListNode *&last) {
+		if (pre == last) {
+			return pre;
+		}
 		ListNode *final_tail = pre;
 		ListNode *cur = pre->next;
 		ListNode *next = NULL;
@@ -26,7 +29,7 @@ public:
 			cur = next;
 		}
 		cur->next = pre;
-
+		final_tail->next = NULL;
 		return final_tail;
 	}
 	ListNode* reverseKGroup(ListNode* head, int k) {
@@ -53,7 +56,6 @@ public:
 				head = next_head;
 			}
 		}
-		pre_tail->next = NULL;
 
 		return pivot->next;
 	}
@@ -68,10 +70,10 @@ int main() {
 	ListNode n2 = ListNode(4);
 	n1.next->next->next = &n2;
 	n2.next = &ListNode(5);
-	n2.next->next = &ListNode(6);
+	//n2.next->next = &ListNode(6);
 
 	Solution so;
-	ListNode* r = so.reverseKGroup(&n1, 3);
+	ListNode* r = so.reverseKGroup(&n1, 2);
 	while (r) {
 		cout << r->val;
 		r = r->next;
