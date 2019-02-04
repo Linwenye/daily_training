@@ -11,6 +11,7 @@ struct ListNode {
 class Solution {
 public:
 	ListNode* mergeKLists(vector<ListNode*>& lists) {
+		if (lists.size() == 0) return NULL;
 		return mergeK(lists, 0, lists.size() - 1);
 	}
 	ListNode* mergeK(vector<ListNode*>& lists, int start, int end) {
