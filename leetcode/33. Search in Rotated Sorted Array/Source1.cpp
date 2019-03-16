@@ -22,8 +22,8 @@ public:
 			else return -1;
 		}
 		else {
-
-			int mid = (l + r) / 2;
+			
+			int mid = (l +  r) / 2;
 			if (nums[l] <= nums[mid]) {
 				if (nums[l] <= target && target <= nums[mid]) {
 					return bsearch(nums, l, mid);
