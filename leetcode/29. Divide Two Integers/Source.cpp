@@ -14,9 +14,13 @@ public:
 		while (u_dividend >= u_divisor) {
 			unsigned int sub = u_divisor;
 			unsigned int res_adder = 1;
-			while (u_dividend >= sub) {
+			while (u_dividend > sub) {
 				sub = sub << 1;
 				res_adder = res_adder << 1;
+			}
+			if (u_dividend == sub) {
+				res += int(res_adder);
+				break;
 			}
 			u_dividend = u_dividend - (sub >> 1);  //Âß¼­ÓÒÒÆ
 			res += int(res_adder >> 1);
