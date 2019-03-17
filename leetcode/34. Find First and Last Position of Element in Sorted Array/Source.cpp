@@ -15,6 +15,10 @@ public:
 	vector<int> b_search(int l, int r) {
 		vector<int> res;
 		int mid;
+
+		/*
+			待改进：l<r的条件放在while判断里，否则每次多判断一次，另一方面参考邓书，可修改只有两个条件分支而不是三个
+		*/
 		while (true) {
 			mid = (l + r) / 2;
 			if (l > r) {
@@ -30,7 +34,7 @@ public:
 			}
 			else {
 				res.push_back(search_l(l, mid));
-				res.push_back(search_r(mid+1, r));
+				res.push_back(search_r(mid, r));
 				return res;
 			}
 		}
@@ -52,6 +56,7 @@ public:
 	}
 
 	int search_r(int l, int r) {
+		if (nums[r] == target) return r;
 		int mid;
 		while (true) {
 			if (l >= r) return l - 1;
@@ -60,7 +65,7 @@ public:
 				l = mid + 1;
 			}
 			else {
-				r = mid - 1;
+				r = mid;
 			}
 		}
 	}

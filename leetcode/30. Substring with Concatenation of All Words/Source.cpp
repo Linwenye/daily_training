@@ -4,6 +4,9 @@ using namespace std;
 
 class Solution {
 public:
+	/*
+		判断不必要的判断，移除~
+	*/
 	vector<int> findSubstring(string s, vector<string>& words) {
 		vector<int> res;
 		if (words.empty()) return res;
