@@ -1,5 +1,6 @@
 #include <vector>
 #include <cstring>
+#include <iostream>
 using namespace std;
 
 class Solution {
@@ -35,7 +36,6 @@ public:
 			}
 		}
 		// check box
-		int new_i, new_j;
 		for (int i = 0; i < 9; i = i + 3) {
 			for (int j = 0; j < 9; j = j + 3) {
 				memset(num_hash, 0, sizeof(num_hash));
@@ -60,6 +60,17 @@ public:
 };
 
 int main() {
-
+	vector<vector<char> > board(9);
+	string strs[9] = { ".87654321","2........","3........","4........","5........","6........","7........","8........","9........" };
+	for (int i = 0; i < 9; i++) {
+		vector<char> vec(9);
+		for (int j = 0; j < 9; j++) {
+			char ch = strs[i][j];
+			vec[j] = ch;
+		}
+		board[i] = vec;
+	}
+	Solution s;
+	cout << s.isValidSudoku(board) << endl;
+	system("pause");
 }
-

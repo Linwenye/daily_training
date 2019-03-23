@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution {
 public:
-	vector<int> nums;
+	vector<int> nums; // 此会发生复制一遍！效率低
 	int target;
 	vector<int> searchRange(vector<int>& nums, int target) {
 		this->nums = nums;
@@ -19,7 +19,7 @@ public:
 		/*
 			待改进：l<r的条件放在while判断里，否则每次多判断一次，另一方面参考邓书，可修改只有两个条件分支而不是三个
 		*/
-		while (true) {
+		while (true) { 
 			mid = (l + r) / 2;
 			if (l > r) {
 				res.push_back(-1);
