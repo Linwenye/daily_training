@@ -35,16 +35,16 @@ public:
 		else if (target - (*candidates)[i] == 0) {
 			temp_res.push_back((*candidates)[i]);
 			res.push_back(temp_res);
+			temp_res.pop_back();
 			return;
 		}
 		else {
-			vector<int> temp_res2;
-			temp_res2 = temp_res;
-			temp_res.push_back((*candidates)[i]);
 			// use candidate[i]
+			temp_res.push_back((*candidates)[i]);
 			candidate_sum(i, temp_res, target - (*candidates)[i]);
+			temp_res.pop_back();
 			// not use
-			candidate_sum(i + 1, temp_res2, target);
+			candidate_sum(i + 1, temp_res, target);
 		}
 
 	}
