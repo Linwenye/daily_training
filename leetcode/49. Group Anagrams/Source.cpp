@@ -2,7 +2,10 @@
 #include <unordered_map>
 #include <algorithm>
 using namespace std;
-
+/*
+	aspiring: 利用hash的思想，统计每个单词出现的次数~
+			  利用素数，乘积作为hash函数~则不需要排序
+*/
 class Solution {
 public:
 	vector<vector<string>> groupAnagrams(vector<string>& strs) {
