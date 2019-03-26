@@ -26,7 +26,6 @@ public:
 					temp.push_back(nums[r]);
 					res.push_back(temp);
 
-					// TODO: add different          
 					int l_value = nums[l];
 					int r_value = nums[r];
 					while (nums[l] == l_value) {
@@ -61,7 +60,6 @@ public:
 		if (nums.size() < 4) return res;
 		sort(nums.begin(), nums.end());
 
-		// TODO: skip repeat
 		int pre = nums[0] + 1;
 		for (int i = 0; i < nums.size() - 3; i++) {
 			if (nums[i] == pre) {
