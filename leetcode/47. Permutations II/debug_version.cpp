@@ -14,7 +14,6 @@ public:
 			return res;
 		}
 		my_permute(nums, res, temp_res, 0);
-		unordered_map<string, int> examine;
 		return res;
 
 	}
