@@ -1,6 +1,9 @@
 #include <vector>
 using namespace std;
 
+/*
+	优化：两边同时往中间，判断哪边大，小的指针往大的靠
+*/
 class Solution {
 public:
 	int trap(vector<int>& height) {
