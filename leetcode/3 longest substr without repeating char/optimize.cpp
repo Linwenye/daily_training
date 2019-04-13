@@ -18,7 +18,7 @@ public:
 				int pre_index = exist[s[i]];
 				left = max(left, pre_index);
 			}
-			exist[s[i]] = i;
+			exist[s[i]] = i;  // 每次更新，则保证index是最后面出现的该字符的索引，因而才用比较left和pre_index
 
 			res = max((int)i - left, res);
 		}
