@@ -30,9 +30,9 @@ public:
 		res.push_back(intervals[0]);
 		for (Interval & interval : intervals)
 		{
-			if (interval.start<=res[-1].end)
+			if (interval.start<=res.back().end)
 			{
-				res[-1].end = max(res[-1].end, interval.end);
+				res.back().end = max(res.back().end, interval.end);
 			}
 			else {
 				res.push_back(interval);
