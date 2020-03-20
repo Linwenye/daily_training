@@ -38,6 +38,8 @@ public:
 		std::vector<int> my_stack;
 		while(node->left){
 			my_stack.push_back(node);
+			
 		}
+
 	}
 };
