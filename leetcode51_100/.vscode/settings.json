@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "typeinfo": "cpp",
+        "__split_buffer": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "ratio": "cpp",
+        "chrono": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "cstdlib": "cpp",
+        "__config": "cpp"
+    }
+}
